@@ -11,7 +11,26 @@ public class Task18 {
 
 	public static void main(String[] args) {
 		
-		qqq
+		int[] mas = new int[10];
+
+		for (int i = 0; i < mas.length; i++) {
+			mas[i] = ((int) (Math.random() * 6) + 1);
+			System.out.print(mas[i] + " ");			
+		}
+		System.out.println();
+		boolean b = false;
+
+		for (int i = 1; i < mas.length - 1; i++) {
+			int sum = mas[i-1] + mas[i] + mas[i+1];
+			if (sum == 10) {				
+				b = true;
+				System.out.println(mas[i-1] + ", " + mas[i] + ", " + mas[i+1] + " - замок открыт");
+			}
+		}
+		
+		if (!b) {
+			System.out.println("Комбинаций для открытия замка не найдено");
+		}
 
 	}
 
